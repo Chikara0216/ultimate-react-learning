@@ -1,0 +1,22 @@
+export const initialItems = [
+  { id: 1, description: "Passports", quantity: 2, packed: false },
+  { id: 2, description: "Socks", quantity: 12, packed: false },
+  { id: 3, description: "Toothbrush", quantity: 2, packed: false },
+  { id: 4, description: "Shampoo", quantity: 1, packed: false },
+  { id: 5, description: "T-shirts", quantity: 5, packed: true },
+  { id: 6, description: "Sandals", quantity: 1, packed: false },
+  { id: 7, description: "Sunglasses", quantity: 1, packed: false },
+  { id: 8, description: "Camera", quantity: 1, packed: false },
+  { id: 9, description: "Laptop", quantity: 1, packed: false },
+  { id: 10, description: "Charging cables", quantity: 3, packed: false },
+  { id: 11, description: "Guidebook", quantity: 1, packed: true },
+  { id: 12, description: "Water bottle", quantity: 2, packed: true },
+  { id: 13, description: "Snacks", quantity: 10, packed: true },
+  { id: 14, description: "Travel pillow", quantity: 1, packed: false },
+  { id: 15, description: "First aid kit", quantity: 1, packed: false },
+  { id: 16, description: "Hat", quantity: 1, packed: false },
+  { id: 17, description: "Jacket", quantity: 1, packed: true },
+  { id: 18, description: "Notebook", quantity: 1, packed: false },
+  { id: 19, description: "Pen", quantity: 3, packed: false },
+  { id: 20, description: "Swimsuit", quantity: 2, packed: false }
+];
