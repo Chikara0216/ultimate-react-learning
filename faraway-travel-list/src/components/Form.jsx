@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
-export const Form = () => {
+export const Form = ({ setItems }) => {
   // Need to set these state varaibles as values of the form elements to make them controlled
   const [description, setDescription] = useState(""); // React controls the input field's value and always sets it to the state variable's value - hence controlled element
   const [quantity, setQuantity] = useState(1);
@@ -11,13 +12,17 @@ export const Form = () => {
     if (!description || !quantity) return;
 
     const newItemToAdd = {
-      id: Date.now(),
+      id: nanoid(),
       description,
       quantity: quantity,
       packed: false
     };
 
-    console.log(newItemToAdd)
+    const handleAddItems = (item) => {
+      setItems(items => [...items, item]); // Here items is previousItems, to not mutate the state directly
+    }
+
+    handleAddItems(newItemToAdd);
 
     // Reset form values
     setDescription('');
@@ -44,6 +49,7 @@ export const Form = () => {
         ))}
       </select>
       <input
+        id="item-description-field"
         type="text"
         placeholder="Item name..."
         value={description}

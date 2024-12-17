@@ -1,10 +1,18 @@
-const Item = ({ item }) => {
+const Item = ({ item, onDeleteItem, checkboxHandler }) => {
   return (
     <li>
-      <span style={item.packed ? { textDecoration: "line-through", opacity: "0.5" } : {}}>
+      <input
+        type="checkbox"
+        value={item.packed}
+        checked={item.packed}
+        onChange={() => checkboxHandler(item.id)}
+      />
+      <span
+        style={item.packed ? { textDecoration: "line-through", opacity: "0.5" } : {}}
+      >
         {item.quantity} {item.description}
       </span>
-      <button>
+      <button onClick={() => onDeleteItem(item.id)}>
         ❌
       </button>
     </li>
